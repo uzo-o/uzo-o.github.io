@@ -1,228 +1,259 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="skam.css">
-    <link rel="shortcut icon" type="image/x-icon" href="http://emojiry.com/wp-content/uploads/2017/03/1f49b.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/81/yellow-heart_1f49b.png" />
     <script>
-document.title = "skam"
-</script>
+      document.title = "skam"
+    </script>
     <style>
-    .wallpaper {
-     background-color: yellow;
-    }
-    #title {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 70px;
-      color: white;
-    }
-    #subtitle {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 50px;
-      color: white;
-      text-align: center;
-    }
-    #links {
+      #wallpaper {
+       background-color: yellow;
+      }
+
+      #title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 70px;
+        color: white;
+      }
+
+      .subtitle {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+
+      .topnav {
+        overflow: hidden;
+        max-width: 970px;
         background-color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: white;
-      text-align: center;
-    }
-    #link1 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: red;
-      text-align: center;
-    }
-    #link2 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: orange;
-      text-align: center;
-    }
-    #link3 {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffe100;
-      text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+      }
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #link_text {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
-      text-align: center;
-    }
-    #link4 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: blue;
-      text-align: center;
-    }
-    #link5 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: purple;
-      text-align: center;
-    }
-    #link6 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: #ff009a;
-      text-align: center;
-    }
-    #synopsis{
+        color: orange;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+      }
 
-    }
+      #synopsis{
+      }
 
-    #seasons{
+      #seasons{
+      }
 
-    }
+      #watch_and_listen {
+      }
 
-    #watch_and_listen {
+      #browse{
+      }
 
-    }
+      #episodes{
+      }
 
-    #browse{
+      #m4p{
+      }
 
-    }
+      .frame {
+        border: 10px dashed white;
+        outline-style: dashed;
+        outline-color: yellow;
+        margin: auto;
+        max-width: 1000px;
+      }
 
-    #episodes{
+      .info {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: black;
+      }
 
-    }
+      .table_text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+      }
 
-    #m4p{
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    }
-    .frame {
-      border: 10px dashed white;
-      outline-style: dashed;
-      outline-color: yellow;
-    }
-    .info {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: black;
-    }
-    * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+      td, th {
+        padding: 8px;
+      }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
+      .container {
+        position: relative;
+        width: 100%;
+      }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: orange;
+      }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+      .container:hover .overlay {
+        opacity: 1;
+      }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
 
-/* Caption text */
-.text {
-  color: #ffe100;
-  text-shadow:
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+      }
 
-.lasttext {
-  color: #ffe100;
-  text-shadow:
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-}
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+      /* Caption text */
+      .text {
+        color: #ffe100;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+      .lasttext {
+        color: #ffe100;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
     </style>
   </head>
-  <body class="wallpaper">
+
+  <body id="wallpaper">
     <script src="skam.js"> </script>
 
     <script>
@@ -236,7 +267,7 @@ img {vertical-align: middle;}
     var view;
     var map;
 
-    // Step 3: We should initalize our variables!
+
     function init() {
     	// Initalize things here
     	Oslo = ol.proj.fromLonLat([10.74609, 59.91273]);
@@ -336,62 +367,97 @@ img {vertical-align: middle;}
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: orange;
+  font-weight: bold;
+  font-style: italic;
   }
 </style>
 
     <center> <h1 id="title"> <strong> 🥰✊<em> S K A M </em> 🏳️‍🌈🙏</strong> </h1>
       <em>
-      <div id="links">
-        <a id="link1" href="#synopsis">synopsis</a>
-        <a id="link2" href="#seasons">seasons</a>
-        <a id="link4" href="#watch_and_listen">watch & listen</a>
-        <a id="link5" href="#browse">browse</a>
-        <a id="link6" href="#episodes">episodes</a>
-        <a id="link1" href="#m4p">map</a>
-      </div>
+        <div class="topnav">
+            <a id="link_text" href="#synopsis">SYNOPSIS</a>
+            <a id="link_text" href="#seasons">SEASONS</a>
+            <a id="link_text" href="#watch_and_listen">WATCH & LISTEN</a>
+            <a id="link_text" href="#browse">BROWSE</a>
+            <a id="link_text" href="#episodes">EPISODES</a>
+            <a id="link_text" href="#m4p">MAP</a>
+        </div>
     </em>
     <p>
       <a href="http://skam.p3.no" target="_blank"><img src="https://smp.vgc.no/v2/images/f7585da6-2c53-4caf-bc97-5066feb6a8d6?fit=crop&h=557&w=990&s=d1c51460117422b607a8ed6cce4678fcb741889c"></a> </center>
     </p>
     </center>
-    <div class="frame">
     <div class="info">
+    <div class="frame">
     <div>
-    <center> <strong> <h3 id="synopsis"> SYNOPSIS: </h3> </strong> </center>
-    </div>
-    <div>
-    <em> Skam </em> (English: <em>Shame</em>) is a Norwegian teen drama web series about the daily life of students at the Hartvig Nissen . From 2015 to 2017, a new main character was followed each season. While airing, a new clip, text message conversation, or social media post was published in real-time and displayed at <a href="http://skam.p3.no" target="_blank">skam.p3.no</a> on a daily basis. Each season has focus on particular topics, ranging from relationship difficulties, identity, eating disorders, sexual assault, homosexuality, mental health issues, religion, and forbidden love.
+    <center> <strong> <h3 id="synopsis"> [SYNOPSIS] </h3> </strong> </center>
     </div>
     <div>
-    <p>
-    <em><strong><h4 id="seasons">Season 1: </strong> </strong><a href="https://www.instagram.com/evamohn2/" target="_blank">Eva Mohn</a></em></h4>
-    <p>
-    (storyline deals with Eva's difficult relationship with her boyfriend Jonas and the themes of loneliness, identity, belonging and friendship)
-    </p>
-    </p>
-    <p>
-    <em><strong><h4>Season 2: </strong><a href="https://www.instagram.com/loglady99/" target="_blank">Noora Amalie Sætre</a></em></h4>
-    <p>
-    (storyline is about her relationship with William and deals with issues of friendship, feminism, eating disorders, self-image, violence, sexual violence and the contemporaneous refugee crisis in relation to Norwegian democracy)
-    </p>
-    </p>
-    <p>
-    <em><strong><h4>Season 3: </strong><a href="https://www.instagram.com/isakyaki/" target="_blank">Isak Valtersen</a></em></h4>
-    <p>
-    (storyline deals with Isak's blossoming relationship with Even Bech Næsheim and is principally a coming out story that deals with issues of love, sexual identity, authenticity, mental illness, religion and friendship)
-    </p>
-    </p>
-    <p>
-    <em><strong><h4>Season 4: </strong><a href="https://www.instagram.com/therealsanabakkoush/" target="_blank">Sana Bakkoush</a></em></h4>
-    <p>
-    (storyline is about the Islamic religion, forbidden love, cyberbullying, friendship, and the Norwegian russ celebratory period)
-    </p>
-    </p>
+    <em> Skam </em> (English: <em>Shame</em>) is a Norwegian teen drama series
+     about the daily life of students attending Hartvig Nissen School. From 2015
+     to 2017, a new main character was followed each season. While airing,
+     a new clip, text message conversation, or social media post from the perspective
+     of the protagonist was published
+      in real-time and displayed at <a href="http://skam.p3.no" target="_blank">skam.p3.no</a>
+      on a nearly daily basis. Each season focuses on a particular subset of cultural issues
+      relevant to its given character, ranging from self-image and relationship issues to homosexuality
+      and religion.
+      <br>
+    </br>
     </div>
     </div>
+    <h4 id="seasons">
+      <table>
+        <tr>
+          <td>
+            <div class="container">
+                <img src="https://live.staticflickr.com/65535/51486703137_a6afd29eb3_w.jpg"></a>
+                <div class="overlay">
+                  <div class="table_text">follows <a href="https://www.instagram.com/evamohn2/" target="_blank">Eva's</a> difficult relationship with her
+                     boyfriend Jonas + themes of loneliness, identity, belonging, and friendship</div>
+                </div>
+            </div>
+          </td>
+          <td>
+            <div class="container">
+                <img src="https://live.staticflickr.com/65535/51487582951_2e46e9e5e0_w.jpg"></a>
+                <div class="overlay">
+                  <div class="table_text">follows <a href="https://www.instagram.com/loglady99/" target="_blank">Noora's</a> push-pull romance with the
+                    school heartthrob William + themes of feminism, eating disorders, sexual violence and the refugee crisis</div>
+                </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="container">
+                <img src="https://live.staticflickr.com/65535/51487837448_8c0c8db17a_w.jpg"></a>
+                <div class="overlay">
+                  <div class="table_text">follows <a href="https://www.instagram.com/isakyaki/" target="_blank">Isak's</a> whirlwind
+                     love affair with the mysterious new kid Even + themes of coming out, heteronormativity, Christianity, and mental illness</div>
+                </div>
+            </div>
+          </td>
+          <td>
+            <div class="container">
+                <img src="https://live.staticflickr.com/65535/51487857773_f64d4f31a7_w.jpg"></a>
+                <div class="overlay">
+                  <div class="table_text">follows <a href="https://www.instagram.com/therealsanabakkoush/" target="_blank">Sana's</a>
+                    friends-to-possibly-lovers plot with Yousef + themes of cyberbullying, the Norwegian russ celebratory period, Islam, and racism </div>
+                </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </h4>
+
     </div>
-    <p id="subtitle">
-    <em> <strong id="watch_and_listen"> &nbsp; < W A T C H > </em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎧&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em> < L I S T E N ></em> </strong>
+    <p class="subtitle">
+    <em> <strong id="watch_and_listen">< W A T C H > </em>&nbsp; 🎧&nbsp;<em> < L I S T E N ></em> </strong>
     </p>
     <div> <center>
     <iframe width="854" height="480" src="https://www.youtube.com/embed/KxPErSmmfaw">
@@ -400,7 +466,7 @@ img {vertical-align: middle;}
     </center>
     </div>
     </p>
-    <p id="subtitle">
+    <p class="subtitle">
     🎞️ <strong> <em id="browse"> B R O W S E </em> <strong> 📸
     </p>
     <div class="slideshow-container">
@@ -408,38 +474,37 @@ img {vertical-align: middle;}
     <div class="mySlides fade">
       <div class="numbertext">1 / 6</div>
       <img src="https://i.ytimg.com/vi/0XpK0GtToiQ/maxresdefault.jpg" style="width:100%">
-      <div class="text">S3E08: Isak and Even being sickeningly in love </div>
+      <div class="text">S3E08: Isak and Even at the Radisson Blu</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 6</div>
       <img src="https://pbs.twimg.com/media/DCdnMw5XsAISqrN.jpg" style="width:100%">
-      <div class="text">S4E09: Yousef and Sana's first date :,) </div>
+      <div class="text">S4E09: Yousef and Sana at the Sørenga Seawater Pool</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 6</div>
       <img src="http://www.newstatesman.com/sites/default/files/styles/large/public/sana.jpg?itok=5Jzvzs10" style="width:100%">
-      <div class="text">S4E03: Sana making money moves</div>
+      <div class="text">S4E03: Sana leading her first russbuss meeting</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">4 / 6</div>
       <img src="https://pa1.narvii.com/6831/6cb9d45b66b0800ce5a8e93aaaebf0f16d5854c8_hq.gif" style="width:100%">
-      <div class="text">S1E04: The infamous girl squad slo-mo</div>
+      <div class="text">S1E04: (From left to right) Chris, Vilde, Eva, Noora, Sana</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">5 / 6</div>
       <img src="https://s2.dmcdn.net/v/N2jc61TAD-jsqdL4l/x480" style="width:100%">
-      <div class="text">S2E04: The girls use a ouija board (Sana is absent because she has brain cells)</div>
+      <div class="text">S2E04: The girls using a ouija board (Sana, the smart one, is absent)</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">6 / 6</div>
       <img src="http://s13.favim.com/orig/170129/even-sana-skam-isak-Favim.com-5027803.jpeg" style="width:100%">
-      <div class="lasttext">S3E10: No descriptive caption they're just my favorite characters and I miss them
-      <div> Isak, Sana, & Even please come home </div> </div>
+      <div class="lasttext">S3E10: The Big Three</div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -487,10 +552,12 @@ img {vertical-align: middle;}
     </script>
     <p>
     <p>
+    <br>
+    </br>
     <div class="frame">
-    <div id="subtitle">
+    <div class="subtitle">
     <center> <em> <strong id="episodes"> E P I S O D E S ↬ </strong> </em>
-    <a href="https://www.dailymotion.com/skamenglishsubs/playlists" target="_blank">📼</a> </center>
+    <a href="https://skamenglishsubs.tumblr.com/tagged/season1/chrono" target="_blank">📼</a> </center>
     </div>
     </div>
     </p>
@@ -503,16 +570,18 @@ img {vertical-align: middle;}
     </center> </div>
     </p>
     </div>
-    <div id="subtitle">
+    <br>
+    </br>
+    <div class="subtitle">
       <center> <em> <strong id="m4p"> << M A P >> </strong> </em> </center>
     </div>
       <p> <center>
-          <button id="button" onclick = "panOslo()">Oslo, Norway</button>
-          <button id="button" onclick = "panSchool()">School</button>
-          <button id="button" onclick = "panCafe()">Cafe</button>
-          <button id="button" onclick = "panKaroke()">Karaoke Bar</button>
-          <button id="button" onclick = "panHotel()">Hotel</button>
-          <button id="button" onclick = "panApartment()">Evak's Apartment</button>
+          <button id="button" onclick = "panOslo()">OSLO, NORWAY</button>
+          <button id="button" onclick = "panSchool()">SCHOOL</button>
+          <button id="button" onclick = "panCafe()">CAFE</button>
+          <button id="button" onclick = "panKaroke()">KARAOKE BAR</button>
+          <button id="button" onclick = "panHotel()">HOTEL</button>
+          <button id="button" onclick = "panApartment()">EVAK'S APARTMENT</button>
       </center> </p>
       <p> <center>
         <img src="https://pictures.tripmasters.com/images/asst/73/oslo_-_city_view_-655423-500.jpg" width="200" height="200">
@@ -525,6 +594,7 @@ img {vertical-align: middle;}
 
     	<div id="map" class="map"></div>
     	<footer>
+    		<p id="link3">This map uses the <a id="link3" href="http://openlayers.org/en/latest/apidoc/">Open Layers API</a></p>
         <center> <a id="link3" href="#title">back to the top</a> </center>
     	</footer>
 
